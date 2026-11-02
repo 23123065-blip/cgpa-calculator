@@ -1,0 +1,93 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CGPA Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: lightblue;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input {
+            padding: 10px;
+            margin: 8px;
+            width: 80%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        h2 {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>CGPA Calculator</h2>
+
+        <input type="number" id="s1" placeholder="Subject 1 Grade Point"><br>
+        <input type="number" id="s2" placeholder="Subject 2 Grade Point"><br>
+        <input type="number" id="s3" placeholder="Subject 3 Grade Point"><br>
+        <input type="number" id="s4" placeholder="Subject 4 Grade Point"><br>
+        <input type="number" id="s5" placeholder="Subject 5 Grade Point"><br>
+
+        <button onclick="calculate()">Calculate CGPA</button>
+
+        <h3 id="result">Your CGPA will appear here</h3>
+    </div>
+
+    <script>
+        function calculate() {
+            let a = Number(document.getElementById("s1").value);
+            let b = Number(document.getElementById("s2").value);
+            let c = Number(document.getElementById("s3").value);
+            let d = Number(document.getElementById("s4").value);
+            let e = Number(document.getElementById("s5").value);
+
+            if (
+                document.getElementById("s1").value === "" ||
+                document.getElementById("s2").value === "" ||
+                document.getElementById("s3").value === "" ||
+                document.getElementById("s4").value === "" ||
+                document.getElementById("s5").value === ""
+            ) {
+                alert("Please enter all five grade points!");
+                return;
+            }
+
+            if ([a, b, c, d, e].some(x => x < 0 || x > 10)) {
+                alert("Grade points must be between 0 and 10!");
+                return;
+            }
+
+            let cgpa = (a + b + c + d + e) / 5;
+
+            document.getElementById("result").innerHTML =
+                "Your CGPA is: " + cgpa.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
+```

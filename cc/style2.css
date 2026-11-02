@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    text-align: center;
+    padding: 30px;
+}
+
+.box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input {
+    padding: 10px;
+    margin: 8px;
+    width: 80%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+h2 {
+    color: darkblue;
+}
+
+h3 {
+    color: green;
+}
